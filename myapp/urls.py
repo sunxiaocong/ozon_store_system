@@ -1,0 +1,79 @@
+from django.urls import path
+
+from myapp import views
+
+app_name = 'myapp'
+urlpatterns = [
+    # api
+    path('admin/overview/count', views.admin.overview.count),
+    path('admin/overview/sysInfo', views.admin.overview.sysInfo),
+    path('admin/thing/list', views.admin.thing.list_api),
+    path('admin/thing/detail', views.admin.thing.detail),
+    path('admin/thing/create', views.admin.thing.create),
+    path('admin/thing/update', views.admin.thing.update),
+
+    path('admin/finance/list', views.admin.finance.list_api),
+    path('admin/finance/detail', views.admin.finance.detail),
+    path('admin/finance/create', views.admin.finance.create),
+    path('admin/finance/update', views.admin.finance.update),
+
+    path('admin/order/list', views.admin.order.list_api),
+    path('admin/order/detail', views.admin.order.detail),
+    path('admin/order/create', views.admin.order.create),
+    path('admin/order/update', views.admin.order.update),
+
+    path('admin/ad_cost/list', views.admin.ad_cost.list_api),
+    path('admin/ad_cost/detail', views.admin.ad_cost.detail),
+    path('admin/ad_cost/create', views.admin.ad_cost.create),
+    path('admin/ad_cost/update', views.admin.ad_cost.update),
+
+    path('admin/store_ad/list', views.admin.store_ad.list_api),
+    path('admin/refund_rank/list', views.admin.refund_rank.list_api),
+
+    path('admin/ps/list', views.admin.profit_statement.list_api),
+    path('admin/unsalable/list', views.admin.unsalable_rank.list_api),
+
+    path('admin/thing/delete', views.admin.thing.delete),
+    path('admin/comment/list', views.admin.comment.list_api),
+    path('admin/comment/create', views.admin.comment.create),
+    path('admin/comment/update', views.admin.comment.update),
+    path('admin/comment/delete', views.admin.comment.delete),
+    path('admin/classification/list', views.admin.classification.list_api),
+    path('admin/classification/create', views.admin.classification.create),
+    path('admin/classification/update', views.admin.classification.update),
+    path('admin/classification/delete', views.admin.classification.delete),
+    path('admin/tag/list', views.admin.tag.list_api),
+    path('admin/tag/create', views.admin.tag.create),
+    path('admin/tag/update', views.admin.tag.update),
+    path('admin/tag/delete', views.admin.tag.delete),
+    path('admin/record/list', views.admin.record.list_api),
+    path('admin/record/create', views.admin.record.create),
+    path('admin/record/update', views.admin.record.update),
+    path('admin/record/delete', views.admin.record.delete),
+    path('admin/banner/list', views.admin.banner.list_api),
+    path('admin/banner/create', views.admin.banner.create),
+    path('admin/banner/update', views.admin.banner.update),
+    path('admin/banner/delete', views.admin.banner.delete),
+    path('admin/ad/list', views.admin.ad.list_api),
+    path('admin/ad/create', views.admin.ad.create),
+    path('admin/ad/update', views.admin.ad.update),
+    path('admin/ad/delete', views.admin.ad.delete),
+    path('admin/notice/list', views.admin.notice.list_api),
+    path('admin/notice/create', views.admin.notice.create),
+    path('admin/notice/update', views.admin.notice.update),
+    path('admin/notice/delete', views.admin.notice.delete),
+    path('admin/loginLog/list', views.admin.loginLog.list_api),
+    path('admin/loginLog/create', views.admin.loginLog.create),
+    path('admin/loginLog/update', views.admin.loginLog.update),
+    path('admin/loginLog/delete', views.admin.loginLog.delete),
+    path('admin/opLog/list', views.admin.opLog.list_api),
+    path('admin/errorLog/list', views.admin.errorLog.list_api),
+    path('admin/user/list', views.admin.user.list_api),
+    path('admin/user/create', views.admin.user.create),
+    path('admin/user/update', views.admin.user.update),
+    path('admin/user/updatePwd', views.admin.user.updatePwd),
+    path('admin/user/delete', views.admin.user.delete),
+    path('admin/user/info', views.admin.user.info),
+    path('admin/adminLogin', views.admin.user.admin_login),
+
+]
